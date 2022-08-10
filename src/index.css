@@ -12,11 +12,16 @@
     text-decoration: none;
 }
 
+p,
+button {
+    font-family: poppins;
+}
+
 :root {
-    --color-bg: #1f1f38;
-    --color-bg-variant: #1f1f38;
-    --color-primary: #4db5ff;
-    --color-primary-variant: Orgba(77, 181, 255, 0.4);
+    --color-bg: #0c382f;
+    --color-bg-variant: #0c382f6f;
+    --color-primary: #2ED6B3;
+    --color-primary-variant: #3be0bf75;
     --color-white: #fff;
     --color-light: rgba(255, 255, 255, 0.6);
 
@@ -31,9 +36,6 @@ html {
     scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar {
-    display: none;
-}
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -45,9 +47,26 @@ body {
 }
 
 /* =================== GENERAL STYLES =================== */
+.wrapper {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    height: 100vh;
+}
+
 .container {
     width: var(--container-width-lg);
     margin: 0 auto;
+    padding-top: 7rem;
+    height: 70vh;
+}
+
+.scroll-snap {
+    scroll-snap-align: start;
+}
+
+img {
+    width: max-content;
 }
 
 h1,
@@ -108,7 +127,9 @@ a:hover {
 
 .btn-primary {
     background: var(--color-primary);
-    color: var(--color-bg);
+    color: var(--color-bg) !important;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 /* =============== MEDIA MEDIUM DEVICE ================= */
